@@ -5,20 +5,9 @@ body {
     height: 100vh;
     margin: 0;
     background: url('piotr-chrobot-6oUsyeYXgTg-unsplash.jpg') center/cover fixed;
-    /* Replace 'your-background-image.jpg' with your image file path */
 
-    /* background-color: #bce0fd; Add a background color related to weather */
-    /* animation: weatherAnimation 10s infinite alternate; Add background animation */
 }
 
-/* @keyframes weatherAnimation {
-    from {
-        background-color: #bce0fd;
-    }
-    to {
-        background-color: #ffd700;
-    }
-} */
 
 .card {
     max-width: 400px;
@@ -27,8 +16,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    /* Use a good font */
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'Nunito', sans-serif;
+
 }
 
 .card-body1 {
@@ -48,7 +38,7 @@ body {
 #weathericon {
     position: relative;
     text-align: center;
-    margin-bottom: 10px; /* Add margin to separate it from the next content */
+    margin-bottom: 10px; 
 }
 
 #weathericon i {
@@ -69,16 +59,16 @@ body {
 .minTemp {
     margin: 0;
     color: #333;
-    /* Set font color */
+
 }
 
-/* Additional styling for icons */
+
 .fa-location-dot {
     color: #3498db;
     font-size: 0.9em;
 }
 
-/* Responsive styling */
+
 @media (max-width: 600px) {
     .card {
         max-width: 100%;

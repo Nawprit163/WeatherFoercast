@@ -7,6 +7,9 @@
     <title>Weather Card</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a930ffd95d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,7 +17,8 @@
     <div class="card">
         <!-- <img src="..." class="card-img-top" alt="..."> -->
         <div class="card-body1">
-            <div class="weathericon"><i class="fas fa-sun fa-3x" style="color: #FFBB64; height: 34px; width: 32px;"></i></div>
+            <div class="weathericon"><i class="fas fa-sun fa-3x" style="color: #FFBB64; height: 34px; width: 32px;"></i>
+            </div>
         </div>
         <div class="card-body2"></div>
         <div class="card-body3">
@@ -27,6 +31,54 @@
         </div>
 
     </div>
+    <script>
+        const cur_date = document.getElementById("date");
+        let weathericon = document.getElementById("weathericon");
+        const temp_status = "cloudy";
+
+        const getCurrentDay =() =>
+        {
+            var week = new Array(7);
+            week[0] = "Sunday";
+            week[1] = "Monday";
+            week[2] = "Tuesday";
+            week[3] = "Wednesday";
+            week[4] = "Thursday";
+            week[5] = "Friday";
+            week[6] = "Saturday";
+            let curr_time = new Date();
+            let ans_day = week[curr_time.getDay()];
+            return ans_day;
+        };
+
+        const getCurrentTime = () =>
+        {
+            var months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "Septemper", "October", "Novemeber", "December"]
+            var current_time = new Date();
+            var month = months[current_time.getMonth()];
+            var day = current_time.getDate();
+
+            let hours = current_time.getHours();
+            let mins = current_time.getMinutes();
+
+            let period = "AM";
+
+            if (hours > 11){
+                period = "PM";
+                if (hours > 12) hours -= 12;
+            }
+
+            if (mins < 10)
+            {
+                mins = "0" + mins;
+            }
+
+            return `${month} ${day} | ${hours}:${mins}${period}`;
+        };
+
+        cur_date.innerHTML = getCurrentDay() + " " + getCurrentTime();
+
+    </script>
 </body>
 
 </html>
