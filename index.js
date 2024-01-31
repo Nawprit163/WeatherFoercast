@@ -2,7 +2,6 @@ const http = require('http');
 const fs = require('fs');
 const requests = require("requests");
 
-// npm init
 const homeFile = fs.readFileSync("index.html", "utf-8");
 const server = http.createServer((req, res) =>
 {
