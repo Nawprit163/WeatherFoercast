@@ -1,0 +1,14 @@
+{
+  "name": "weather_forcast_display",
+  "version": "1.0.0",
+  "description": "a weather forecast display web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nawprit Saini",
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}
