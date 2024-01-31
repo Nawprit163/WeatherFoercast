@@ -9,6 +9,7 @@
   "author": "Nawprit Saini",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^3.0.3",
     "requests": "^0.3.0"
   }
 }
